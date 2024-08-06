@@ -1,0 +1,56 @@
+﻿@model Employee
+@{
+    ViewBag.Title = "Xóa nhân viên";
+}
+
+<div class="box box-danger">
+    <div class="box box-body">
+        <form action="~/Employee/Delete/@Model.EmployeeID" method="post">
+            <div class="form-group">
+                <label>Tên nhân viên</label>
+                <p class="form-control-static">@Model.FullName</p>
+            </div>
+            <div class="form-group">
+                <label>Ngày sinh</label>
+                <p class="form-control-static">@Model.BirthDate</p>
+
+            </div><div class="form-group">
+                <label>Địa chỉ</label>
+                <p class="form-control-static">@Model.Address</p>
+            </div>
+            <div class="form-group">
+                <label>Số điện thoại</label>
+                <p class="form-control-static">@Model.Phone</p>
+
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <p class="form-control-static">@Model.Email</p>
+
+            </div>
+
+            <div class="form-group">
+                <label>Is working</label>
+                <p class="form-control-static">@Model.IsWorking</p>
+
+            </div>
+
+            <div class="form-group text-right">
+                @if (ViewBag.AllowDelete)
+                {
+                    <button type="submit" class="btn btn-danger">
+                        <i class="fa fa-trash"></i>
+                        Xóa dữ liệu
+                    </button>
+                }
+                else
+                {
+                    <span style="color:red">Không được xóa nhân viên này!!</span>
+                }
+                <a href="~/Employee" class="btn btn-default">
+                    Quay lại
+                </a>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+﻿<form id="formSearch" action="/Product" method="get">
+    <div class="row">
+        <div class="col-sm-3">
+            <label>Loại hàng:</label>
+            <select class="form-control" name="CategoryID">
+                <option value="">-- Chọn loại hàng --</option>
+                <option value="1">May mặc - Thời trang</option>
+                <option value="2">Mỹ phẩm</option>
+            </select>
+        </div>
+        <div class="col-sm-3">
+            <label>Nhà cung cấp:</label>
+            <select class="form-control" name="SupplierID">
+                <option value="">-- Chọn nhà cung cấp --</option>
+                <option value="1">Công ty Xuất nhập khẩu Thành Hưng</option>
+                <option value="2">Công ty TNHH Sao Mai Việt</option>
+            </select>
+        </div>
+        <div class="col-sm-1">
+            <label>Giá từ:</label>
+            <input type="text" class="form-control" name="MinPrice" value="0">
+        </div>
+        <div class="col-sm-1">
+            <label>đến:</label>
+            <input type="text" class="form-control" name="MaxPrice" value="0">
+        </div>
+        <div class="col-sm-4">
+            <label>Tên mặt hàng cần tìm:</label>
+            <div class="input-group">
+                <input name="SearchValue" type="text" class="form-control" placeholder="Nhập mặt hàng hàng cần tìm" autofocus="">
+                <div class="input-group-btn">
+                    <button class="btn btn-info" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                    <a href="/Product/Create" class="btn btn-primary" style="margin-left:5px">
+                        <i class="fa fa-plus"></i> Bổ sung
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
